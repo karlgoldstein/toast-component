@@ -16,5 +16,5 @@ export default function useEscapeKey(callback) {
       window.removeEventListener("keydown", onKeyDown);
     }
 
-  }, []);
-}
+  }, [callback]);
+} 
