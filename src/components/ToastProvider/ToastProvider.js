@@ -8,7 +8,8 @@ function ToastProvider({ children}) {
 
   const [toasts, setToasts] = React.useState([]);
 
-  useEscapeKey(() => setToasts([]));
+  const dismissAll = React.useCallback(() => setToasts([]), []);
+  useEscapeKey(dismissAll);
 
   function addToast(variant, message) {
 
